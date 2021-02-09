@@ -1,0 +1,13 @@
+f = open('songs.docx', 'w')
+f.write('hello\nmy old\nfriend')
+f.close()
+
+fa = open('songs.docx', 'r')
+fa = fa.read()
+print(fa)
+fa = open('songs.docx', 'r')
+fa = fa.readline()
+print(fa)
+fa = open('songs.docx', 'r')
+fa = fa.readlines()
+print(fa)
