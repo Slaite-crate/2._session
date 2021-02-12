@@ -1,13 +1,21 @@
 f = open('songs.docx', 'w')
-f.write('hello\nmy old\nfriend')
+f.writelines('hello\nmy old\nfriend')
 f.close()
 
-fa = open('songs.docx', 'r')
-fa = fa.read()
-print(fa)
-fa = open('songs.docx', 'r')
-fa = fa.readline()
-print(fa)
-fa = open('songs.docx', 'r')
-fa = fa.readlines()
-print(fa)
+f = open('songs.docx', 'r')
+f = f.read()
+print(f)
+
+f = open('songs.docx', 'r')
+line = f.readline()
+while line:
+    print(line, end='')
+    line = f.readline()
+
+print()
+
+f = open('songs.docx', 'r')
+for i in f.readlines():
+    print(i, end='')
+
+print()

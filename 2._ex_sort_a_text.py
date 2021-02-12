@@ -1,9 +1,10 @@
-vowels = ['a', 'e', 'i', 'o', 'u', 'y']
+vowels = ['a', 'e', 'i', 'o', 'u', 'y', 'æ', 'ø', 'å']
 
 def sortMyText(str):
     result = ''
     for l in str:
-        if l not in vowels:
+        k = l
+        if k.lower() not in vowels:
             result += l
     result = sorted(result)
     return result
@@ -14,9 +15,11 @@ def sortMyText2(str):
     return result
 
 def sortMyText3(str):
-    pass
+    for i in vowels:
+        str = str.lower().replace(i,'')
+    return sorted(str)
 
 
 print('write something: ', end='')
 x = input()
-print(sortMyText(x))
+print(sortMyText3(x))
